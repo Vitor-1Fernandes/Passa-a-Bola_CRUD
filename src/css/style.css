@@ -1,0 +1,32 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+#header{
+    grid-area: header;
+    background-color: blueviolet;
+}
+#main{
+    grid-area: main;
+}
+#card{
+    grid-area: card;
+    background-color: cadetblue;
+}
+#footer{
+    grid-area: footer;
+    background-color: tomato;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 5fr 1fr;
+    grid-template-areas: 
+    'header header header'
+    'card card card'
+    'mains main main'
+    'footer footer footer';
+}
