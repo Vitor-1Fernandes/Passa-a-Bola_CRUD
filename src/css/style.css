@@ -1,0 +1,219 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+nav{
+    display: flex;
+    grid-area: nav;
+    background-color: white;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 5%;
+    align-items: center;
+    font-size: 2vw;
+    height: 40px;
+    background-color: #230860;
+    margin-bottom: 1%;
+}
+.button{
+    border-radius: 2px;
+    background-color: #e56ea9;
+    font-size: 12px;
+    padding: 4px;
+    color: white;
+}
+#filter{
+    display: flex;
+    grid-area: filter;
+    justify-content: center;
+    align-items: baseline;
+}
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: auto;
+    padding-top:25px ;
+}
+aside img{
+   display: block;
+   width: 253px;
+   height: auto;
+
+}
+.square{
+    position: absolute;
+    background-color: #e56ea9;
+    z-index: -10;
+    height: 265px;
+    width: 242px;
+
+    border-radius: 4px;
+}
+#main{
+    display: flex;
+    grid-area: main;
+}
+.userOption{
+    display: flex;
+    justify-content: baseline;
+    width: 30%;
+    min-width: 200px;
+    background-color: rgb(203, 105, 216);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#card{
+    grid-area: card;
+}
+.cardh3{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+.rowCards{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.fifaCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(145deg, #230860, #48366e);
+    height: 275px;
+    width: 238px;
+    margin: 10px 10px;
+    border-radius: 9px;
+    padding: 12px 3px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease;
+    color: white;
+    text-align: center;
+    
+}
+.fifaCard:hover {
+    transform: translateY(-5px);
+}
+.fifaCard h3{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.bgFifaCard{
+    display: block;
+    background-color: #e56ea9;
+    height: 150px;
+    width: 100%;
+    z-index: 20;
+    border-radius: 4px;
+}
+.bgFifaCard img{
+    width: auto;
+    height: 100%;
+}
+.cardText{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.fifaCard h4{
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: start;
+}
+.fifaCard h4:nth-of-type(1),
+.fifaCard h4:nth-of-type(3){
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: start;
+    padding: 3px;
+}
+.fifaCard h4:nth-of-type(2),
+.fifaCard h4:nth-of-type(4){
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: end;
+    padding: 3px;
+}
+.containerButton{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    height: auto;
+    padding-top: 30px;
+    gap: 2px;
+}
+.containerButton a {
+    width: 50%;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* curva suave tipo "material design" */
+}
+
+.containerButton a:hover {
+    width: 80%;
+}
+#footer{
+    grid-area: footer;
+    background-color: rgb(203, 105, 216);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 10fr 1fr;
+    grid-template-areas: 
+    'nav nav nav'
+    'filter card card'
+    'main main main'
+    'footer footer footer';
+}
+
+@media (max-width: 768px) {
+    .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr 10fr 10fr 1fr;
+    grid-template-areas: 
+    'nav'
+    'filter'
+    "card"
+    'main'
+    'footer';
+} }
+/* aside img{
+   width:  50%;
+   min-width: 170px;
+   height: auto;
+}
+.square{
+    position: relative;
+    background-color: #e56ea9;
+    z-index: -1;
+    left: 80px;
+    bottom: 154px;
+    height: 150px;
+    width: 130px;
+    border-radius: 4px;
+}
+#filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
