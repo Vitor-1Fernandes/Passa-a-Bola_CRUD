@@ -3,30 +3,80 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: "Arial";
+    color: white;
 }
-#header{
-    grid-area: header;
-    background-color: blueviolet;
+nav{
+    display: flex;
+    grid-area: nav;
+    background-color: white;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 5%;
+    align-items: center;
+    font-size: 2vw;
+    height: 40px;
+    background-color: #230860;
+    margin-bottom: 1%;
+}
+.button{
+    border-radius: 5px;
+    background-color: #e56ea9;
+    font-size: 12px;
+    padding: 4px;
+    color: white;
+}
+#filter{
+    grid-area: filter;
+}
+aside img{
+   width:  50%;
+   min-width: 170px;
+   margin-left: 17%;
+   height: auto;
+}
+.square{
+    position: relative;
+    background-color: #e56ea9;
+    z-index: -1;
+    left: 80px;
+    bottom: 154px;
+    height: 150px;
+    width: 130px;
 }
 #main{
+    display: flex;
     grid-area: main;
 }
+.userOption{
+    display: flex;
+    justify-content: baseline;
+    width: 30%;
+    min-width: 200px;
+    background-color: rgb(203, 105, 216);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 #card{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
     grid-area: card;
-    background-color: cadetblue;
+    color: black;
+   
 }
 #footer{
     grid-area: footer;
-    background-color: tomato;
+    background-color: rgb(203, 105, 216);
 }
 
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 5fr 1fr;
+    grid-template-rows: 1fr 6fr 10fr 1fr;
     grid-template-areas: 
-    'header header header'
-    'card card card'
+    'nav nav nav'
+    'line line line'
+    'filter card card'
     'mains main main'
     'footer footer footer';
 }
